@@ -1,0 +1,180 @@
+.homeMenu {
+    width: 60vw;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.taskListContainer {
+    width: 60vw;
+    margin: auto;
+}
+
+.noRecordFound{
+    text-align:  center;
+    border: 1px solid red;
+    color: slategray;
+}
+
+.searchBar {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 5px auto 20px auto;
+    border-radius: 10px;
+    background-color: #ffffff78;
+    padding: 0 5px;
+    position: relative;
+}
+
+.searchBar input[type="text"] {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.searchBar .icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.ActionBar {
+    width: 50vw;
+    margin: 0 auto 10px auto;
+    justify-content: space-evenly;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.ActionBar li {
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.ActionBar li:hover {
+    overflow: visible;
+}
+
+.ActionBar li:hover .icon {
+    transform: translateY(-20px) scale(1.25);
+}
+
+.ActionBar li:hover .title {
+    transform: translateY(20px);
+}
+
+.title {
+    width: 100%;
+    position: absolute;
+    transform: translateY(5000px);
+    text-align: center;
+    transition: all .5s;
+    /* display: none; */
+}
+
+.icon {
+    font-size: 22px;
+    transition: all .5s;
+}
+
+.subActionMenu {
+    width: 50vw;
+    margin: auto;
+}
+
+.subActionMenu li {
+    padding: 5px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.activeSubAction {
+    border-bottom: 5px solid rgb(149 61 163);
+}
+
+.searchSuggestion {
+    width: calc(100% - 50px);
+    position: absolute;
+    top: 35px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.searchSuggestionList {
+    width: 100%;
+    padding: 3px 10px;
+    border-bottom: 1px solid white;
+    margin-bottom: 2px;
+    background-color: rgb(255 255 255 / 50%);
+}
+
+.taskList {
+    width: 60vw;
+    margin: 10px auto;
+    padding: 5px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+}
+
+.taskList div h2 {
+    margin-right: 20px;
+}
+
+.taskList input[type="checkBox"] {
+    accent-color: rgb(149 61 163);
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+}
+
+.pagination {
+    width: 60vw;
+    margin: 10px auto;
+    background-color: #ffffff78;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.paginationIcon {
+    font-size: 25px;
+}
+
+.paginationIcon:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width : 600px) {
+    .homeMenu {
+        width: 90vw;
+    }
+
+    .taskListContainer {
+        width: 90vw;
+    }
+
+    .searchBar {
+        width: 80vw;
+    }
+
+    .ActionBar {
+        width: 80vw;
+    }
+
+    .pagination {
+        width: 90vw;
+    }
+
+    .taskList {
+        width: 90vw;
+    }
+}

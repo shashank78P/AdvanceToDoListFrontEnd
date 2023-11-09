@@ -1,0 +1,94 @@
+.loaderBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(164, 164, 164, 0.5);
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.loaderText {
+    font-size: 30px;
+    color: black;
+}
+
+/* message */
+
+.messageFrame {
+    width: auto;
+    padding-right: 50px;
+    color: white;
+    height: 70px;
+    background-color: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 900;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: capitalize;
+    transform: translateX(0px);
+    transition: all 2s;
+    animation: animateMessageFrame 1s cubic-bezier(0.43, 0.41, 0, 1.34) 1;
+}
+
+@keyframes animateMessageFrame {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.icons {
+    outline: -2px solid green;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    z-index: 915;
+}
+
+
+.error {
+    color: red;
+    box-shadow: 1px 1px 1px red, 1px -1px 1px red, -1px 1px 1px red, -1px -1px 1px red;
+}
+
+.sucess {
+    color: green;
+    box-shadow: 1px 1px 1px green, 1px -1px 1px green, -1px 1px 1px green, -1px -1px 1px green;
+}
+
+.icons>* {
+    font-size: 30px;
+    z-index: 902;
+}
+
+.anniCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 901;
+    transform: scale(1);
+    /* transition: 5s; */
+    animation-delay: 1s;
+    animation: animateAnniCircle 5s linear 1;
+}
+
+@keyframes animateAnniCircle {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

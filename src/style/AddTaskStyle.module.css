@@ -1,0 +1,81 @@
+.addTaskFrame {
+    width: 60vw;
+    height: auto;
+    margin: 10px auto;
+}
+
+.formContainer {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+}
+
+.row {
+    margin: 20px 0;
+}
+
+.viewTaskFrame {
+    width: 60vw;
+    height: auto;
+    margin: 50px auto;
+}
+
+.viewTaskHeader {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.title {
+    font-size: 20px;
+    font-size: 500;
+    margin: 5px;
+}
+
+.subTitle {
+    margin-left: 5px;
+}
+
+.descriptionDiv{
+    width: 100%;
+    padding: 10px;
+}
+
+.description {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.actionDiv > *{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.dateTimeSec{
+    padding: 10px;
+    font-size: 17px;
+}
+
+.dateTimeSec p{
+    text-align: right;
+    margin-right: 20px;
+}
+
+.label{
+    width: 100%;
+    height: auto;
+    display: inline;
+    margin: 50px;
+}
+
+@media screen and (max-width : 600px) {
+    .addTaskFrame {
+        width: 90vw;
+    }
+    .viewTaskFrame{
+        width: 80vw;
+        margin: 50px auto;
+    }
+}

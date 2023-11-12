@@ -23,7 +23,7 @@ const TaskList = (props) => {
                         return (<div className={globalStyle.centerSpaceBetween + " " + homeStyle.taskList} key={i}>
                             <ul >
                                 <li className={` ${homeStyle.titleRow}`}>
-                                    <Link to={`http://localhost:3000/viewTask/${task._id}`} ><h2>{task.title}</h2></Link>
+                                    <Link to={`/viewTask/${task._id}`} ><h2>{task.title}</h2></Link>
                                     <p className={(task.state === "active") ? globalStyle.active : globalStyle.completed +" " + homeStyle?.status} >{task.state}</p>
                                 </li>
                                 <li className={`${homeStyle.description}`}>

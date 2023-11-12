@@ -19,6 +19,7 @@
     backdrop-filter: blur(5px);
     border-radius: 20px;
     padding: 10px 0;
+    color: #0f172a;
 }
 
 .loginNav {

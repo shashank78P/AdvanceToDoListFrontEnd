@@ -35,7 +35,7 @@ const ViewTask = () => {
                                             <FaEdit />
                                         </Link>
                                     </div>
-                                    <div><FaTrash
+                                    <div style={{"cursor" : "pointer"}}><FaTrash
                                         onClick={() => {
                                             postData(`${process.env.REACT_APP_BACKEND_URL}/todoTask/deleteTodoTask/${param._id}`, {}, "/")
                                         }}

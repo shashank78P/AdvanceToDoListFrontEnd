@@ -60,7 +60,7 @@ function Login() {
                             <li
                                 className={(!logInFlag) ? globalStyle.header + " " + loginStyle.active : globalStyle.header}
                                 onClick={() => { setLogInFlag(false) }}
-                            >Sign In</li>
+                            >Sign Up</li>
                             <span className={(logInFlag) ? "indicator" : "indicator" + " " + loginStyle.moveIndicator}></span>
                         </ul>
                     </div>
@@ -136,7 +136,7 @@ function Login() {
                                             postData(`${process.env.REACT_APP_BACKEND_URL}/auth/signIn`, formData)
                                         }
                                     }}
-                                >Submit</button>
+                                >{logInFlag ? "Log In" : "Sign Up"}</button>
                             }
                         </form>
                     </div>

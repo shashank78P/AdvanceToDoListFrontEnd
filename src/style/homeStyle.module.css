@@ -17,6 +17,7 @@
 .icon {
     color: #334155;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .optionFirst {
@@ -195,6 +196,7 @@
     color: #334155;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .paginationIcon:hover {

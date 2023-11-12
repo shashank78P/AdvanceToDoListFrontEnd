@@ -33,6 +33,13 @@
 .row input[type="radio"]{
     margin: 10px;
 }
+
+.description {
+    font-size: 18px;
+    text-align: justify;    
+    color: #334155;
+}
+
 .row input[type ="text"],
 .row textarea
 {
@@ -49,10 +56,6 @@
     margin-right: 0 !important;
 }
 
-.description {
-    font-size: 18px;
-    text-align: justify;
-}
 
 .actionDiv>* {
     margin: 20px;
@@ -62,11 +65,13 @@
 .dateTimeSec {
     padding: 10px;
     font-size: 17px;
+    color: #334155;
 }
 
 .dateTimeSec p {
     text-align: right;
     margin-right: 20px;
+    color: #334155;
 }
 
 .label {

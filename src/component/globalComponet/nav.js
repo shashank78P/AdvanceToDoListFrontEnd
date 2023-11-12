@@ -6,8 +6,8 @@ import userContext from '../context/userContext'
 const Nav = () => {
     const userData = useContext(userContext)
     return (
-        <nav>
-            <ul className={ globalStyle.nav  + " " + globalStyle.centerSpaceBetween }>
+        <nav className={`${ globalStyle.nav }`}>
+            <ul className={  globalStyle.centerSpaceBetween }>
                 <li>
                     <img src={logo} alt="logo" />
                 </li>

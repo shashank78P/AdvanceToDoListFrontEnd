@@ -24,7 +24,7 @@ const TaskList = (props) => {
                             <ul >
                                 <li className={` ${homeStyle.titleRow}`}>
                                     <Link to={`/viewTask/${task._id}`} ><h2>{task.title}</h2></Link>
-                                    <p className={(task.state === "active") ? globalStyle.active : globalStyle.completed +" " + homeStyle?.status} >{task.state}</p>
+                                    <p className={(task.state === "active") ? globalStyle.active : globalStyle.completed + " " + homeStyle?.status} >{task.state}</p>
                                 </li>
                                 <li className={`${homeStyle.description}`}>
                                     {task?.description}
@@ -55,10 +55,10 @@ const TaskList = (props) => {
                         </div>
                         )
                     }) :
-                    <h1 className={`${ homeStyle.notFound }`}>No Record Found!!!</h1>
+                    <h1 className={`${homeStyle.notFound}`}>No Record Found!!!</h1>
             }
             {/* pagination */}
-            {(props?.taskList?.data) &&
+            {
                 <div className={globalStyle.centerSpaceBetween + " " + homeStyle.pagination}>
                     <div className={homeStyle.paginationIcon} onClick={() => {
                         handelPage("left")

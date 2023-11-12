@@ -7,7 +7,7 @@ const Nav = () => {
     const userData = useContext(userContext)
     return (
         <nav>
-            <ul className={ globalStyle.nav + " " + globalStyle.boxBackground + " " + globalStyle.centerSpaceBetween }>
+            <ul className={ globalStyle.nav  + " " + globalStyle.centerSpaceBetween }>
                 <li>
                     <img src={logo} alt="logo" />
                 </li>
@@ -17,7 +17,7 @@ const Nav = () => {
                             localStorage.removeItem("token")
                             userData.setIsLogIn(false)
                         }}
-                    >LogOut</button>
+                    >Log out</button>
                 </li>
             </ul>
         </nav>

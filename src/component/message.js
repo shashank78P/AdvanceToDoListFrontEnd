@@ -11,10 +11,13 @@ const Message = () => {
                 {
                     (userData.message.status === "sucess") ? <FaExclamation /> : <FaQuestion />
                 }
-                <div className={messageStyle.anniCircle}>
+                <div
+                    className={messageStyle.anniCircle}
+                    style={{backgroundColor : (userData.message.status === "sucess") ? "#4ade80" :  "#f87171"}}
+                >
                 </div>
             </div>
-            <div>{userData?.message.message}</div>
+            <div className={(userData.message.status === "sucess") ? globalStyle.sucess : globalStyle.error}>{userData?.message.message}</div>
         </div>
     )
 }

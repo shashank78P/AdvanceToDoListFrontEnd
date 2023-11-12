@@ -1,46 +1,52 @@
 .addTaskFrame {
-    width: 60vw;
+    width: 80vw;
     height: auto;
-    margin: 10px auto;
+    /* margin: 10px auto; */
+    margin: 20px auto;
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .formContainer {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: auto;
     padding: 10px;
 }
 
 .row {
-    margin: 20px 0;
+    color: #334155;
+    margin-bottom: 20px;
 }
 
-.viewTaskFrame {
-    width: 60vw;
-    height: auto;
-    margin: 50px auto;
+.row h2 {
+    font-size: 18px;
+    color: #334155;
 }
 
-.viewTaskHeader {
-    width: 100%;
-    height: auto;
+.statusRadio{
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.row input[type="radio"]{
+    margin: 10px;
+}
+.row input[type ="text"],
+.row textarea
+{
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
     padding: 10px;
-    border: 1px solid white;
+    font-size: 16px;
+    color: #334155;
+    margin-top: 10px;
+    background-color: transparent;
 }
 
-.title {
-    font-size: 20px;
-    font-size: 500;
-    margin: 5px;
-}
-
-.subTitle {
-    margin-left: 5px;
-}
-
-.descriptionDiv{
-    width: 100%;
-    padding: 10px;
+.submitBtn{
+    margin-right: 0 !important;
 }
 
 .description {
@@ -48,34 +54,69 @@
     text-align: justify;
 }
 
-.actionDiv > *{
+.actionDiv>* {
     margin: 20px;
     font-size: 20px;
 }
 
-.dateTimeSec{
+.dateTimeSec {
     padding: 10px;
     font-size: 17px;
 }
 
-.dateTimeSec p{
+.dateTimeSec p {
     text-align: right;
     margin-right: 20px;
 }
 
-.label{
-    width: 100%;
+.label {
+    width: 100px;
     height: auto;
     display: inline;
-    margin: 50px;
+    margin: 10px;
+}
+
+.viewTaskFrame {
+    width: 80vw;
+    margin: 20px auto;
+    border : 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.subTitle{
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.descriptionDiv{
+    padding: 10px;
+    text-align: justify;
+}
+
+.actionDiv div *{
+    color: #334155;
+    font-size: 18px;
+}
+
+.dateTimeSec p{
+    width: 100%;
+    font-size: 16px;
+    text-align: end;
 }
 
 @media screen and (max-width : 600px) {
     .addTaskFrame {
         width: 90vw;
     }
-    .viewTaskFrame{
-        width: 80vw;
+
+    .viewTaskFrame {
+        width: 90vw;
         margin: 50px auto;
     }
 }

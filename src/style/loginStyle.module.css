@@ -1,17 +1,18 @@
-.wrapper{
+.wrapper {
     width: 100vw;
     height: 100vh;
+    background: linear-gradient(45deg, rgb(10 193 105), rgb(149 61 163));
 }
 
-.frame{
-    width: min( 500px , 95vw);
+.frame {
+    width: min(500px, 95vw);
     height: 500px;
     position: relative;
     transition: 2s;
 }
 
-.form{
-    width: min( 350px , 80vw);
+.form {
+    width: min(350px, 80vw);
     height: auto;
     z-index: 3;
     background: rgba(255, 255, 255, 0.5);
@@ -20,12 +21,12 @@
     padding: 10px 0;
 }
 
-.loginNav{
+.loginNav {
     padding: 10px 20px;
     position: relative;
 }
 
-.loginNav li{
+.loginNav li {
     width: 50%;
     text-align: center;
     overflow: hidden;
@@ -34,17 +35,17 @@
     text-transform: capitalize;
 }
 
-.active{
+.active {
     color: white;
     transition: 1.5s;
 }
 
-.moveIndicator{
+.moveIndicator {
     transform: translateX(100%);
 }
 
-.row{
+.row {
     width: 100%;
-    padding: 0 10px ;
+    padding: 0 10px;
     margin: 10px 0;
 }

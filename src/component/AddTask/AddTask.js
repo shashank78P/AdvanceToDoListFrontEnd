@@ -42,7 +42,7 @@ const AddTask = () => {
         title: data?.data[0].title,
         description: data?.data[0].description,
         state: data?.data[0].state,
-        taskId : params._id
+        taskId: params._id
       })
     }
   }, [data])
@@ -50,15 +50,15 @@ const AddTask = () => {
   return (
     <>
       <Nav />
-      <div className={addTaskFrame.addTaskFrame + " " + globalStyle.boxBackground}
+      <div className={addTaskFrame.addTaskFrame}
         onLoad={() => {
         }}
       >
         <form method='post'
           onSubmit={(e) => {
             e.preventDefault()
-            if ((errorMessage.titleError === true && errorMessage.descriptionError === true) || params._id !== '0' ) {
-              let path = (params._id === '0')? `${process.env.REACT_APP_BACKEND_URL}/todoTask/` : `${process.env.REACT_APP_BACKEND_URL}/todoTask/updateTodoTask` 
+            if ((errorMessage.titleError === true && errorMessage.descriptionError === true) || params._id !== '0') {
+              let path = (params._id === '0') ? `${process.env.REACT_APP_BACKEND_URL}/todoTask/` : `${process.env.REACT_APP_BACKEND_URL}/todoTask/updateTodoTask`
               postData(path, formaData, "/")
             }
           }}
@@ -116,37 +116,41 @@ const AddTask = () => {
                 })
               }
             </div>
-            <div className={addTaskFrame.row}>
+            <div className={addTaskFrame.row + " " + addTaskFrame.statusRadio}>
               <h2>Task state</h2>
-              <span className={addTaskFrame.label}>
-                <label htmlFor='active' name="state">Active
-                  <input name="state" id='active' type="radio"
-                    checked={(formaData.state === "active") ? true : false}
-                    value="active"
-                    onChange={(e) => {
-                      setFormaData({
-                        ...formaData,
-                        state: "active"
-                      })
-                    }}
-                  />
-                </label>
-              </span>
-              <span className={addTaskFrame.label}>
-                <label htmlFor='completed' name="state">Completed
-                  <input name="state" id='completed' type="radio"
-                    checked={(formaData.state === "completed") ? true : false}
-                    onChange={(e) => {
-                      setFormaData({
-                        ...formaData,
-                        state: "completed"
-                      })
-                    }}
-                  />
-                </label>
-              </span>
+              <ul className={addTaskFrame.statusRadio}>
+                <li className={addTaskFrame.label}>
+                  <label htmlFor='active' name="state">
+                    Active
+                    <input name="state" id='active' type="radio"
+                      checked={(formaData.state === "active") ? true : false}
+                      value="active"
+                      onChange={(e) => {
+                        setFormaData({
+                          ...formaData,
+                          state: "active"
+                        })
+                      }}
+                    />
+                  </label>
+                </li>
+                <li className={addTaskFrame.label}>
+                  <label htmlFor='completed' name="state">
+                    Completed
+                    <input name="state" id='completed' type="radio"
+                      checked={(formaData.state === "completed") ? true : false}
+                      onChange={(e) => {
+                        setFormaData({
+                          ...formaData,
+                          state: "completed"
+                        })
+                      }}
+                    />
+                  </label>
+                </li>
+              </ul>
             </div>
-            <input className={globalStyle.submitBtn} type="submit" value="submit"></input>
+            <input className={globalStyle.submitBtn + " " + addTaskFrame.submitBtn} type="submit" value={`${params._id === '0' ? "Submit" : "Update"}`}></input>
           </div>
         </form>
       </div>

@@ -5,6 +5,7 @@ import globalStyle from "../../style/global.module.css"
 import { Link, useParams } from "react-router-dom"
 import UseGetData from "../../customHook/UseGetData"
 import UsePostData from "../../customHook/UsePostData"
+import Nav from '../globalComponet/nav'
 
 const ViewTask = () => {
     const { getData, response } = UseGetData()
@@ -17,15 +18,16 @@ const ViewTask = () => {
 
     return (
         <>
+              <Nav />
             {
                 data?.data && data?.data.map((task, i) => {
                     return (
 
-                        <div className={viewTaskStyle.viewTaskFrame + " " + globalStyle.boxBackground} key={i}>
+                        <div className={viewTaskStyle.viewTaskFrame } key={i}>
                             <header className={viewTaskStyle.viewTaskHeader + " " + globalStyle.centerSpaceBetween}>
                                 <div>
                                     <div className={viewTaskStyle.title}>{task.title}</div>
-                                    <p className={viewTaskStyle.subTitle}>{task.state}</p>
+                                    <p className={   task.state == "completed" ? globalStyle.completed : globalStyle?.active + " " + viewTaskStyle.subTitle }>{task.state}</p>
                                 </div>
                                 <div className={globalStyle.centerSpaceBetween + " " + viewTaskStyle.actionDiv}>
                                     <div>

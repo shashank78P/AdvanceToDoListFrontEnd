@@ -19,7 +19,7 @@ function App() {
     const token = localStorage.getItem("tokecn")
     console.log(token)
     try {
-      userData.setLazyLoader(true)
+      // userData.setLazyLoader(true)
       axios.get(`${process.env.REACT_APP_BACKEND_URL}/auth/auth-me`, { headers: { authorization: localStorage.getItem("token") } })
         .then((data) => {
           console.log(data?.data?.data)
@@ -28,10 +28,10 @@ function App() {
             userData?.setUserDetails({ _id, email, userName })
             userData?.setIsLogIn(true)
           }
-          userData.setLazyLoader(false)
+          // userData.setLazyLoader(false)
         })
         .catch(err => {
-          userData.setLazyLoader(false)
+          // userData.setLazyLoader(false)
           userData.setMessage(
             "error", "LogIn/SignUp first!!!"
           )
